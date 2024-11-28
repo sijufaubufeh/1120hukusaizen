@@ -7,3 +7,22 @@ window.onload = function() {
     setInterval(updateTime, 1000);
     updateTime();
 };
+// スクロール禁止
+function preventScroll(e) {
+    e.preventDefault();
+}
+
+// スクロールを無効化
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('touchmove', preventScroll, { passive: false });
+}
+
+// スクロールを有効化
+function enableScroll() {
+    document.body.style.overflow = 'auto';
+    document.removeEventListener('touchmove', preventScroll);
+}
+
+// ページロード時に無効化
+disableScroll();
