@@ -7,22 +7,16 @@ window.onload = function() {
     setInterval(updateTime, 1000);
     updateTime();
 };
-// スクロール禁止
-function preventScroll(e) {
-    e.preventDefault();
-}
-
-// スクロールを無効化
 function disableScroll() {
-    document.body.style.overflow = 'hidden';
-    document.addEventListener('touchmove', preventScroll, { passive: false });
+    document.documentElement.style.overflow = 'hidden'; // htmlのスクロールを無効化
+    document.body.style.overflow = 'hidden'; // bodyのスクロールを無効化
 }
 
-// スクロールを有効化
 function enableScroll() {
-    document.body.style.overflow = 'auto';
-    document.removeEventListener('touchmove', preventScroll);
+    document.documentElement.style.overflow = ''; // デフォルトに戻す
+    document.body.style.overflow = '';
 }
 
-// ページロード時に無効化
-disableScroll();
+// 実行例
+disableScroll(); // スクロールを無効化
+enableScroll();  // スクロールを有効化
