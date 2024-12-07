@@ -139,8 +139,8 @@ h2 {
     background-color: #b2c6e3;
     padding: 25px;
     border-radius: 15px;
-    width: 350px; /* 横幅を小さくするために追加 */
-    height: 355px;
+    width: 355px; /* 横幅を小さくするために追加 */
+    height: 360px;
     margin: 0 auto; /* 中央揃え */
     overflow: hidden; /* スクロール禁止 */
 }
@@ -198,7 +198,7 @@ h2 {
     border-radius: 8px;
 }
 .ticket-box {
-    width: 350px; /* ボックスの幅 */
+    width: 355px; /* ボックスの幅 */
     padding: 10px; /* ボックス内の余白 *
     border: 2px solid #ffffff; /* ボックスの枠線 */
     border-radius: 10px; /* 角丸 */
